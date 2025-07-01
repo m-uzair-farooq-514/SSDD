@@ -1,24 +1,26 @@
 pipeline {
-agent any
-stages {
-stage('Build') {
-steps {
-echo 'Building....';
-// Here you can define commands for your build
+    agent any
 
-}
-}
-stage('Test') {
-steps {
-echo 'Testing..';
-// Here you can define commands for your tests
-}
-}
-stage('Deploy') {
-steps {
-echo 'Deploying....';
-// Here you can define commands for your deployment
-}
-}
-}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Add your build commands here
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Add your test commands here
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your deploy commands here
+            }
+        }
+    }
 }
